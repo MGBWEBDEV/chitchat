@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package chitchat;
+
+option go_package = "ChitChat/grpc;chitchat";
+
+enum MessageType {
+  JOIN = 0;
+  PUBLISH = 1;
+  LEAVE = 2;
+}
+
+// Sent from client to server.
+message ClientMessage {
+  MessageType type = 1;
+  string client_id = 2;
+  string content = 3;      // only used for PUBLISH
+  int64 lamport_time = 4;  // sender's clock when the message was sent
+}
+
+// Broadcast from server to every active client.
+message ServerMessage {
+  string sender_id = 1;    // participant name, or "server" for join/leave notices
+  string content = 2;
+  int64 lamport_time = 3;
+}
+
+service ChitChat {
+  rpc Chat(stream ClientMessage) returns (stream ServerMessage);
+}
