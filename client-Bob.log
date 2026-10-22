@@ -1,2 +1,0 @@
-[Client Bob] 2026/10/22 02:01:48 event=SEND type=JOIN lamport=1 content=""
-[Client Bob] 2026/10/22 02:01:48 event=DELIVER lamport=3 sender=server content="Participant Bob joined Chit Chat at logical time 3"

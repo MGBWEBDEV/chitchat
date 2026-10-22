@@ -13,9 +13,9 @@ go run ./server
 In three separate terminals, start clients with different names:
 
 ```powershell
-go run ./client -name Alice
-go run ./client -name Bob``
-go run ./client -name Carol
+go run ./client -name Mario
+go run ./client -name Alex
+go run ./client -name Hanes
 ```
 
 Type a message and press Enter to publish it. Type `/leave` to exit.

@@ -1,6 +1,0 @@
-[Server] 2026/10/22 02:01:11 event=SERVER_STARTUP addr=[::]:50051
-[Server] 2026/10/22 02:01:34 event=CLIENT_JOINED client=Alice lamport=2
-[Server] 2026/10/22 02:01:34 event=DELIVER target=Alice lamport=2 content="Participant Alice joined Chit Chat at logical time 2"
-[Server] 2026/10/22 02:01:48 event=CLIENT_JOINED client=Bob lamport=3
-[Server] 2026/10/22 02:01:48 event=DELIVER target=Alice lamport=3 content="Participant Bob joined Chit Chat at logical time 3"
-[Server] 2026/10/22 02:01:48 event=DELIVER target=Bob lamport=3 content="Participant Bob joined Chit Chat at logical time 3"
